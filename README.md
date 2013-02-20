@@ -16,3 +16,4 @@ Just having fun making a multistep form with backbone. This example is made in R
 ## Todo
 
 * Support for multi model forms.
+* Inline field error messages.
