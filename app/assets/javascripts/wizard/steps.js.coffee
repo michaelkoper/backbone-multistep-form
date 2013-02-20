@@ -16,9 +16,6 @@ class @StepsView extends Backbone.View
 
     @model.bind 'invalid', @onInValidModel, @
 
-    $(document).on 'keydown', 'body', (e)=>
-      @onKeyDown(e)
-
   render: ->
     $(@el).html(@template())
     @
