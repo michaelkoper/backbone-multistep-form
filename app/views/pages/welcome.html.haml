@@ -1,0 +1,68 @@
+
+#step_views
+
+%script{:id => 'project-wizard-steps', :type => "text/template"}
+  %form
+    #steps
+  %footer
+    %nav
+      %ul
+        %li
+          %a.button.prev.gray Previous
+        %li
+          %a.button.next.blue Next
+        %li
+          %a.button.submit.green Save
+
+%script{:id => "project-wizard-breadcrumbs", :type => "text/template"}
+  %nav.breadcrumbs
+    %ul
+      %li
+        %a{:href => "#steps/basic", :data => {"view" => "basic"}} Basic
+      %li
+        %a{:href => "#steps/rewards", :data => {"view" => "rewards"}} Rewards
+      %li
+        %a{:href => "#steps/story", :data => {"view" => "story"}} Story
+
+%script{:id => "project-wizard-step-1", :type => "text/template"}
+  %h2 The Basics
+  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+
+  %ol
+    %li
+      %label Project Title
+      %input#project_name.text_field{:name => 'project[name]', :type => "text", :value => "<%= get('name') %>".html_safe}
+    %li
+      %label Category
+      = select :project, :category_id, Category.all.collect{|x| [x.name, x.id]}, {:include_blank => true}
+    %li
+      %label Basic Info
+      %textarea#project_basic_info{:name => 'project[basic_info]', :type => "text", :value => "<%= get('basic_info') %>".html_safe}
+    %li
+      %label Location
+      %input#project_location.text_field{:name => 'project[location]', :type => "text", :value => "<%= get('location') %>".html_safe}
+    %li
+      %label Funding duration
+      %input#project_funding_duration_days.text_field{:name => 'project[funding_duration_days]', :type => "text", :value => "<%= get('funding_curation_days') %>".html_safe}
+
+%script{:id => "project-wizard-step-2", :type => "text/template"}
+  %h2 Step 2
+  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+
+  %ol
+    %li
+      %label Reward
+      %input#project_reward.text_field{:name => 'project[reward]', :type => "text", :value => "<%= get('reward') %>".html_safe}
+
+
+%script{:id => "project-wizard-step-3", :type => "text/template"}
+  %h2 Step 3
+  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  %ol
+    %li
+      %label Story
+      %textarea#project_story{:name => "project[story]"}
+        <%= get('story') %>
+    %li
+      %label Email
+      %input#project_email.text_field{:name => 'project[email]', :type => "text", :value => "<%= get('email') %>".html_safe}

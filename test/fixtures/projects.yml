@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  basic_info: MyString
+  category_id: 1
+  location: MyString
+  funding_duration_days: 1
+
+two:
+  name: MyString
+  basic_info: MyString
+  category_id: 1
+  location: MyString
+  funding_duration_days: 1

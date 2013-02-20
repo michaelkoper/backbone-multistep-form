@@ -1,0 +1,53 @@
+@import "compass/css3/box-shadow"
+@import "compass/css3/text-shadow"
+@import "compass/css3/border-radius"
+@import "compass/css3/images"
+
+#steps
+  .step
+    display: none
+#step_views
+  footer
+    +box-shadow(inset 0 4px 5px 0 rgba(196,220,245,0.6))
+    position: fixed
+    height: 80px
+    bottom: 0
+    left: 0
+    background-color: rgba(227,240,253,0.9)
+    width: 100%
+    nav
+      margin-left: 200px
+      width: 500px
+      padding-top: 10px
+      position: relative
+      ul
+        width: 100%
+        li
+          float: left
+          margin-left: 10px
+          width: 120px
+          a
+            +border-radius(5px)
+            font-size: 16px
+            font-weight: 500
+            padding: 16px 0
+            text-align: center
+            width: 103px
+            display: block
+            color: #fff
+            cursor: pointer
+            &.next
+              +box-shadow(#98c8f8 0 1px 0 0 inset,#fff 0 1px 0 0)
+              +background(linear-gradient(top, #76b6f5, #56a4f2))
+              +text-shadow(#1071d1 0 1px 0)
+              border: 1px solid #509be6
+            &.prev
+              +background(linear-gradient(top, #d8d8d8, #cfcfcf))
+              +text-shadow(#999 0 1px 0)
+              +box-shadow(#e2e2e2 0 1px 0 0 inset,#fff 0 1px 0 0)
+              border: 1px solid #bfbfbf
+            &.submit
+              +background(linear-gradient(top, #9fd067, #87c443))
+              +text-shadow(#537a26 0 1px 0)
+              +box-shadow(#b7dc8d 0 1px 0 0 inset,#fff 0 1px 0 0)
+              border: 1px solid #7cb33d

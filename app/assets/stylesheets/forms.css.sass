@@ -1,0 +1,46 @@
+@import "compass/css3/border-radius"
+
+form
+  ol
+    li
+      width: 100%
+      clear: both
+      margin-bottom: 20px
+
+label
+  color: #4c4c4c
+  font-size: 13px
+  line-height: 18px
+  padding: 18px 20px 0 0
+  text-align: right
+  vertical-align: top
+  width: 100px
+  float: left
+
+input, textarea
+  +border-radius(5px)
+  width: 400px
+  background: #fff
+  border: 1px solid #ddd
+  font-size: 15px
+  color: #000
+  height: 25px
+  padding: 10px
+  margin-top: 3px
+  &.invalid
+    border: 1px solid red
+
+
+input
+  &.text_field
+
+select
+  padding: 10px 9px 10px 7px
+  height: 40px
+  -webkit-appearance: menulist-button
+  border: 1px solid gray
+  width: 421px
+
+textarea
+  height: 70px
+  resize: none
