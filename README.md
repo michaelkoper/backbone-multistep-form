@@ -4,10 +4,10 @@ Just having fun making a multistep form with backbone. This example is made in R
 
 ## Installation
 
-    # instal mongod
+    # install mongodb
     brew install mongodb
 
-    # instal gems
+    # install gems
     bundle
 
     # starting rails server
